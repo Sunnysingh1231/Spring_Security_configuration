@@ -13,6 +13,7 @@ BCrypt Password Encoding: Ensures secure password storage.
 
 
 **Frontend (HTML, CSS, JavaScript) - Demo Pages**
+
 Registration Page: Allows users to sign up.
 Login Page: Users can log in with their credentials.
 View All Users Page: Displays all users after authentication.
@@ -36,14 +37,21 @@ spring-security-project/
 │── src/main/resources/
 
 │   ├── application.properties  # Database and security configuration
+
 │── frontend/                 # Demo frontend pages
+
 │   ├── welcome.html            # Registration Page
+
 │   ├── login.html            # Login Page
+
 │   ├── allusers.html            # View All Users Page
+
 │   ├── logout.html           # Logout Page
+
 │── pom.xml    
 
 **Technologies Used**
+
 Spring Boot (Backend Framework)
 Spring Security (Authentication & Authorization)
 MySQL (Database)
