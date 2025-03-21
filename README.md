@@ -9,6 +9,7 @@ User Logout API (/logout): Logs out the authenticated user.
 View All Users API (/allusers): Displays all registered users (requires authentication).
 BCrypt Password Encoding: Ensures secure password storage.
 
+
 **Frontend (HTML, CSS, JavaScript) - Demo Pages**
 Registration Page: Allows users to sign up.
 Login Page: Users can log in with their credentials.
@@ -19,12 +20,19 @@ Logout Page: Provides an option to log out securely
 spring-security-project/
 │── src/main/java/com/example/
 │   ├── config/               # Security configuration files
+
 │   ├── model/                # User model/entity
+
 │   ├── repository/           # Database access layer
+
 │   ├── service/              # Business logic layer
+
 │   ├── controller/           # API endpoints
+
 │   ├── SpringSecurityApplication.java  # Main entry point
+
 │── src/main/resources/
+
 │   ├── application.properties  # Database and security configuration
 │── frontend/                 # Demo frontend pages
 │   ├── welcome.html            # Registration Page
