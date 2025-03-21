@@ -1,7 +1,9 @@
 ***Spring Security Project with MySQL Authentication***
+
 This project is a Spring Boot application that implements Spring Security for user authentication and authorization. It includes a backend API for user registration, login, logout, and viewing all users, as well as a frontend demo with registration, login, and user management pages using mysql database.
 
 **Features**
+
 ✅ Backend (Spring Boot & Spring Security)
 User Registration API (/registration): Saves user data in a MySQL database.
 User Login API (/login): Validates credentials and allows access if the user exists.
