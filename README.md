@@ -20,8 +20,11 @@ View All Users Page: Displays all users after authentication.
 Logout Page: Provides an option to log out securely
 
 **Project Structure**
+
 spring-security-project/
+
 │── src/main/java/com/example/
+
 │   ├── config/               # Security configuration files
 
 │   ├── model/                # User model/entity
