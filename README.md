@@ -35,7 +35,7 @@ POST	/register	Register a new user	❌ No
 
 POST	/login	Authenticate user login	❌ No
 
-GET	/users/all	View all registered users	✅ Yes
+GET	/allusers	View all registered users	✅ Yes
 
 POST	/logout	Logout the user	✅ Yes
 
