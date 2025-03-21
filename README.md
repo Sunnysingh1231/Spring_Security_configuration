@@ -19,6 +19,26 @@ Login Page: Users can log in with their credentials.
 View All Users Page: Displays all users after authentication.
 Logout Page: Provides an option to log out securely
 
+**Technologies Used**
+
+Spring Boot (Backend Framework)
+Spring Security (Authentication & Authorization)
+MySQL (Database)
+BCrypt Password Encoder (Password Security)
+HTML, CSS, JavaScript (Frontend for Demo)
+
+**API Endpoints**
+
+Method	Endpoint	Description	Authentication
+
+POST	/register	Register a new user	❌ No
+
+POST	/login	Authenticate user login	❌ No
+
+GET	/users/all	View all registered users	✅ Yes
+
+POST	/logout	Logout the user	✅ Yes
+
 **Project Structure**
 
 spring-security-project/
@@ -53,10 +73,3 @@ spring-security-project/
 
 │── pom.xml    
 
-**Technologies Used**
-
-Spring Boot (Backend Framework)
-Spring Security (Authentication & Authorization)
-MySQL (Database)
-BCrypt Password Encoder (Password Security)
-HTML, CSS, JavaScript (Frontend for Demo)
