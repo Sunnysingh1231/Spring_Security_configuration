@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/allcss.css">
+</head>
+<body>
+
+    <div class="main">
+        welcome
+        <a class="register" href="">register</a>
+        <a class="login" href="">login</a>
+        <a class="logout" href="">logout</a>
+        <a href="">view profile</a>
+        <a href="">view all users</a>
+    </div>
+
+    <div class="wrapper wrapper3">
+        <h2>Logout Here</h2>
+        <form th:action="@{logouttt}"> 
+          
+          <div class="input-box button">
+            <input type="Submit" value="Logout">
+          </div>
+          
+        </form>
+    </div>
+</body>
+</html>

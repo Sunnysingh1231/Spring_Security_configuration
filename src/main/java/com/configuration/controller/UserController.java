@@ -30,46 +30,46 @@ public class UserController {
 	private UserService userService;
 
 	@GetMapping("/")
-	public String welcome() {
-		
-		return "welcome";
-	}
-	
-	@GetMapping("/registration")
-	public String registrationForm(Model model) {
+	public String welcome(Model model) {
 		
 		User user = new User();
 		
 		model.addAttribute("user", user);
-		
-		System.out.println(model);
-		
-		return "Registration";
+				
+		return "welcome";
 	}
-	
-	@PostMapping("/homepage")
+	@PostMapping("/registration")
+//	@RequestMapping
 	public String homepage(@ModelAttribute User u1) {
 		u1.setPassword(passwordEncoder.encode(u1.getPassword()));
+		System.out.println(u1);
 		userService.saveNewUser(u1);
-		return "homepage";
-	}
-	
-	@GetMapping("/login")
-	public String login() {
-		
 		return "login";
 	}
-	
-	@GetMapping("/loginsuccess")
-	public String loginsuccess() {
-		
-		return "loginsuccess";
+	@GetMapping("/login")
+	public String allcss() {
+		System.out.println("fff");
+		return "login";
+	}
+	@GetMapping("/logout")
+	public String logout() {
+		System.out.println("fff");
+		return "logout";
 	}
 	
-	@GetMapping("/allusers")
-	public ResponseEntity<List<User>> logout() {
-		
-		return new ResponseEntity<List<User>>(userService.findAllUser(),HttpStatus.OK);
+	@GetMapping("/home")
+//	@RequestMapping
+//	@ResponseBody
+	public String home() {
+		return "home";
 	}
+	
+	@GetMapping("allusers")
+//	@ResponseBody
+	public ResponseEntity<List<User>> allusers() {
+		return new ResponseEntity<List<User>>(userService.findAllUsers(),HttpStatus.OK);
+	}
+	
+	
 	
 }

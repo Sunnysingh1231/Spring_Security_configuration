@@ -36,20 +36,24 @@ public class securityConfig {
 				.csrf(customi -> customi.disable())
 				
 				.authorizeHttpRequests(req -> req
-						.requestMatchers("/","/registration","/homepage","/register").permitAll()
+						.requestMatchers("/","/login","/registration","/allcss.css").permitAll()
 						.anyRequest().authenticated())
+				
+//				.formLogin(Customizer.withDefaults())
 				
 				.formLogin(form -> form
 	                    .loginPage("/login") // Custom login page
-	                    .defaultSuccessUrl("/loginsuccess", true) // Redirect to homepage after successful login
+	                    .defaultSuccessUrl("/home", true) // Redirect to homepage after successful login
 	                    .permitAll()
 	            )
 				
 				.logout(logout -> logout
-	                    .logoutUrl("/logout")
+	                    .logoutUrl("/logouttt")
 	                    .logoutSuccessUrl("/") // Redirect to login page after logout
 	                    .permitAll()
 	            )
+				
+//				.sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				
 				.build();
 	}

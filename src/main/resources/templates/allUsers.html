@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="seeAllUsers">See All Users</button>
+<div id="userList"></div>
+
+<script>
+document.getElementById("seeAllUsers").addEventListener("click", () => {
+    fetch("/allusers", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "include" // Ensures cookies/session are included in the request
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Unauthorized access. Please login first.");
+        }
+        return response.json();
+    })
+    .then(data => {
+        let userList = document.getElementById("userList");
+        userList.innerHTML = "<h3>All Users:</h3>";
+        data.forEach(user => {
+            userList.innerHTML += `<p>${user.name} - ${user.userName}</p>`;
+        });
+    })
+    .catch(error => alert(error.message));
+});
+</script>
+</body>
+</html>
